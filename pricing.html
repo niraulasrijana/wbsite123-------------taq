@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pricing | Taqtics</title>
+
+    <meta name="description"
+        content="Explore Taqtics solutions and pricing for smarter restaurant operations.">
+
+    <!-- GOOGLE FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!--  PRICING CSS -->
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f7f9fc;
+            color: #111827;
+        }
+
+/*  NAVBAR */
+
+        .navbar {
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #1763e9;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #1763e9;
+            color: #ffffff !important;
+        }
+
+        .btn-primary:hover {
+            background: #0f4fc7;
+            transform: translateY(-2px);
+        }
+
+/*  HERO */
+
+        .pricing-hero {
+            text-align: center;
+            padding: 90px 20px 70px;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #eaf2ff 0,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at top right,
+                    #eef5ff 0,
+                    transparent 35%
+                ),
+                #ffffff;
+        }
+
+        .eyebrow {
+            color: #1763e9;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+        }
+
+        .pricing-hero h1 {
+            max-width: 850px;
+            margin: auto;
+            font-size: 52px;
+            line-height: 1.1;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        .pricing-hero h1 span {
+            color: #1763e9;
+        }
+
+        .hero-text {
+            max-width: 700px;
+            margin: 22px auto 0;
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
+
+/* PRICING SECTION */
+
+        .pricing-section {
+            padding: 80px 6%;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 50px;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p:last-child {
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+/*  3 PRICING BOXES */
+
+        .pricing-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+            align-items: stretch;
+        }
+
+/* PRICING CARD */
+
+        .pricing-card {
+            position: relative;
+
+            background: #ffffff;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 18px;
+
+            padding: 38px 32px;
+
+            min-height: 590px;
+
+            display: flex;
+            flex-direction: column;
+
+            box-shadow:
+                0 12px 35px rgba(15, 23, 42, 0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+
+            border-color: #b9cdf5;
+
+            box-shadow:
+                0 20px 45px rgba(15, 23, 42, 0.14);
+        }
+
+/*  POPULAR CARD */
+
+        .popular-plan {
+            border: 2px solid #1763e9;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f4f8ff 0%,
+                    #ffffff 38%
+                );
+
+            transform: translateY(-12px);
+        }
+
+        .popular-plan:hover {
+            transform: translateY(-18px);
+        }
+
+/* POPULAR BADGE */
+
+        .popular-badge {
+            position: absolute;
+
+            top: -15px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background: #1763e9;
+            color: #ffffff;
+
+            padding: 8px 18px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 0.8px;
+
+            white-space: nowrap;
+        }
+
+/*  PLAN TEXT */
+
+        .plan-label {
+            display: inline-block;
+
+            color: #64748b;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 1.2px;
+
+            margin-bottom: 14px;
+        }
+
+        .pricing-card h3 {
+            font-size: 29px;
+            color: #111827;
+
+            margin-bottom: 12px;
+        }
+
+        .plan-description {
+            color: #64748b;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            min-height: 72px;
+        }
+
+/*  PRICE */
+        .price-area {
+            margin-top: 25px;
+            margin-bottom: 22px;
+        }
+
+        .price-area h2 {
+            font-size: 25px;
+            color: #111827;
+
+            margin-bottom: 8px;
+        }
+
+        .price-note {
+            font-size: 12px;
+            color: #94a3b8;
+
+            line-height: 1.5;
+        }
+
+/* BUTTON */
+
+        .pricing-btn {
+            width: 100%;
+
+            text-align: center;
+
+            margin-top: 5px;
+        }
+
+/*   DIVIDER */
+
+        .plan-divider {
+            height: 1px;
+
+            background: #e5e7eb;
+
+            margin: 30px 0 25px;
+        }
+
+/* FEATURES */
+
+        .features h4 {
+            font-size: 14px;
+            color: #111827;
+
+            margin-bottom: 18px;
+        }
+
+        .plan-features {
+            list-style: none;
+        }
+
+        .plan-features li {
+            position: relative;
+
+            padding-left: 28px;
+
+            margin-bottom: 14px;
+
+            color: #475569;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+        .plan-features li::before {
+            content: "✓";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 19px;
+            height: 19px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #eaf2ff;
+
+            color: #1763e9;
+
+            border-radius: 50%;
+
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+/* BENEFITS */
+
+        .benefits {
+            padding: 80px 6%;
+
+            background: #ffffff;
+        }
+
+        .benefit-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .benefit-card {
+            background: #f8fafc;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 15px;
+
+            padding: 30px;
+
+            text-align: center;
+        }
+
+        .benefit-icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .benefit-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+/*   FAQ */
+
+        .faq {
+            padding: 80px 6%;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        details {
+            background: #ffffff;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 12px;
+
+            padding: 20px 22px;
+
+            margin-bottom: 15px;
+        }
+
+        summary {
+            cursor: pointer;
+
+            font-weight: 700;
+
+            color: #111827;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        details p {
+            margin-top: 15px;
+
+            color: #64748b;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+/*   CTA */
+
+        .cta {
+            padding: 80px 20px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #111827,
+                    #1e293b
+                );
+
+            color: #ffffff;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: #cbd5e1;
+
+            max-width: 650px;
+
+            margin: auto;
+
+            line-height: 1.7;
+        }
+
+        .cta .btn {
+            margin-top: 25px;
+        }
+
+/*  FOOTER */
+
+        footer {
+            background: #0f172a;
+
+            color: #ffffff;
+
+            padding: 45px 7% 25px;
+        }
+
+        .footer-brand h2 {
+            font-size: 28px;
+        }
+
+        .footer-brand p {
+            max-width: 450px;
+
+            color: #94a3b8;
+
+            margin-top: 12px;
+
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            margin-top: 35px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #334155;
+
+            color: #94a3b8;
+
+            font-size: 13px;
+        }
+
+ /*  MOBILE */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 550px;
+            }
+
+            .popular-plan {
+                transform: none;
+            }
+
+            .popular-plan:hover {
+                transform: translateY(-8px);
+            }
+
+            .benefit-grid {
+                grid-template-columns: 1fr;
+                max-width: 550px;
+            }
+
+            .pricing-hero h1 {
+                font-size: 40px;
+            }
+
+            .section-heading h2 {
+                font-size: 31px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .pricing-hero {
+                padding: 65px 18px 50px;
+            }
+
+            .pricing-hero h1 {
+                font-size: 32px;
+            }
+
+            .pricing-section {
+                padding: 55px 18px;
+            }
+
+            .pricing-card {
+                padding: 30px 24px;
+            }
+
+            .cta h2 {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<!--  NAVBAR -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            taqtics
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="industries.html">
+                    Industries
+                </a>
+            </li>
+
+            <li>
+                <a href="company.html">
+                    Company
+                </a>
+            </li>
+
+            <li>
+                <a href="resources.html">
+                    Resources
+                </a>
+            </li>
+
+            <li>
+                <a href="pricing.html">
+                    Pricing
+                </a>
+            </li>
+
+            <li>
+                <a href="trial.html">
+                    Start Free Trial
+                </a>
+            </li>
+
+            <li>
+                <a href="demo.html" class="btn btn-primary">
+                    Book a Demo
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!--   HERO -->
+
+<section class="pricing-hero">
+
+    <p class="eyebrow">
+        TAQTICS PRICING
+    </p>
+
+    <h1>
+        Simple Solutions for
+        <span>Smarter Restaurant Operations</span>
+    </h1>
+
+    <p class="hero-text">
+        Choose the right solution for your restaurant operations.
+        Get the tools you need to improve visibility, accountability,
+        and execution across every location.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="demo.html" class="btn btn-primary">
+            Get Custom Pricing
+        </a>
+
+    </div>
+
+</section>
+
+<!--  PRICING CARDS -->
+
+<section class="pricing-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            PLANS & SOLUTIONS
+        </p>
+
+        <h2>
+            Choose the Right Plan for Your Business
+        </h2>
+
+        <p>
+            Flexible solutions designed for restaurant businesses
+            of different sizes and operational needs.
+        </p>
+
+    </div>
+
+
+    <div class="pricing-grid">
+
+
+        <!-- ESSENTIAL -->
+
+        <div class="pricing-card">
+
+            <span class="plan-label">
+                STARTER
+            </span>
+
+            <h3>
+                Essential
+            </h3>
+
+            <p class="plan-description">
+                Essential tools to improve daily restaurant operations.
+            </p>
+
+
+            <div class="price-area">
+
+                <h2>
+                    Custom Pricing
+                </h2>
+
+                <p class="price-note">
+                    Designed according to your business requirements.
+                </p>
+
+            </div>
+
+
+            <a href="demo.html" class="btn btn-primary pricing-btn">
+                Get Started
+            </a>
+
+
+            <div class="plan-divider"></div>
+
+
+            <div class="features">
+
+                <h4>
+                    Includes:
+                </h4>
+
+                <ul class="plan-features">
+
+                    <li>Task Management</li>
+                    <li>Daily Checklists</li>
+                    <li>Team Accountability</li>
+                    <li>Basic Reporting</li>
+                    <li>Operational Visibility</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GROWTH -->
+
+        <div class="pricing-card popular-plan">
+
+            <div class="popular-badge">
+                MOST POPULAR
+            </div>
+
+
+            <span class="plan-label">
+                PROFESSIONAL
+            </span>
+
+            <h3>
+                Growth
+            </h3>
+
+            <p class="plan-description">
+                Advanced tools for growing restaurant operations.
+            </p>
+
+
+            <div class="price-area">
+
+                <h2>
+                    Custom Pricing
+                </h2>
+
+                <p class="price-note">
+                    Designed according to your business requirements.
+                </p>
+
+            </div>
+
+
+            <a href="demo.html" class="btn btn-primary pricing-btn">
+                Get Started
+            </a>
+
+
+            <div class="plan-divider"></div>
+
+
+            <div class="features">
+
+                <h4>
+                    Includes:
+                </h4>
+
+                <ul class="plan-features">
+
+                    <li>Everything in Essential</li>
+                    <li>Audits & Checklists</li>
+                    <li>Issue Management</li>
+                    <li>Multi-Location Control</li>
+                    <li>Advanced Reporting</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ADVANCED -->
+
+        <div class="pricing-card">
+
+            <span class="plan-label">
+                ENTERPRISE
+            </span>
+
+            <h3>
+                Advanced
+            </h3>
+
+            <p class="plan-description">
+                Complete operational control for large restaurant
+                networks and enterprises.
+            </p>
+
+
+            <div class="price-area">
+
+                <h2>
+                    Custom Pricing
+                </h2>
+
+                <p class="price-note">
+                    Designed according to your business requirements.
+                </p>
+
+            </div>
+
+
+            <a href="demo.html" class="btn btn-primary pricing-btn">
+                Contact Us
+            </a>
+
+
+            <div class="plan-divider"></div>
+
+
+            <div class="features">
+
+                <h4>
+                    Includes:
+                </h4>
+
+                <ul class="plan-features">
+
+                    <li>Everything in Growth</li>
+                    <li>Enterprise Reporting</li>
+                    <li>Advanced Analytics</li>
+                    <li>Centralized Control</li>
+                    <li>Scalable Operations</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--    BENEFITS -->
+
+<section class="benefits">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            WHY TAQTICS
+        </p>
+
+        <h2>
+            More Than Just Restaurant Software
+        </h2>
+
+        <p>
+            Build consistent operations and improve performance
+            across every restaurant location.
+        </p>
+
+    </div>
+
+
+    <div class="benefit-grid">
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+                ⏱
+            </div>
+
+            <h3>
+                Save Time
+            </h3>
+
+            <p>
+                Simplify repetitive operational tasks and help teams
+                focus on what matters most.
+            </p>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+                ◉
+            </div>
+
+            <h3>
+                Better Visibility
+            </h3>
+
+            <p>
+                Get clear visibility into tasks, audits, issues,
+                and operational performance.
+            </p>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+                ✓
+            </div>
+
+            <h3>
+                Consistent Quality
+            </h3>
+
+            <p>
+                Standardize processes and improve execution
+                across every restaurant location.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--   FAQ -->
+
+<section class="faq">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            FAQ
+        </p>
+
+        <h2>
+            Frequently Asked Questions
+        </h2>
+
+    </div>
+
+
+    <div class="faq-container">
+
+        <details>
+
+            <summary>
+                How does Taqtics pricing work?
+                <span>+</span>
+            </summary>
+
+            <p>
+                Pricing can vary based on your business size,
+                number of locations, and operational requirements.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Can I request a demo?
+                <span>+</span>
+            </summary>
+
+            <p>
+                Yes. You can request a demo to understand how
+                Taqtics can support your restaurant operations.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Is there a free trial?
+                <span>+</span>
+            </summary>
+
+            <p>
+                You can use the Start Free Trial page to submit
+                your trial request.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Is Taqtics suitable for multiple locations?
+                <span>+</span>
+            </summary>
+
+            <p>
+                The website is designed around restaurant operations
+                across multiple locations.
+            </p>
+
+        </details>
+
+    </div>
+
+</section>
+
+<!--  CTA -->
+
+<section class="cta">
+
+    <h2>
+        Ready to Improve Your Restaurant Operations?
+    </h2>
+
+    <p>
+        Discover how Taqtics can help your teams execute
+        consistently across every location.
+    </p>
+
+    <a href="demo.html" class="btn btn-primary">
+        Book a Demo
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        <h2>
+            taqtics
+        </h2>
+
+        <p>
+            Turn everyday operations into consistent,
+            measurable execution across every location.
+        </p>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © <span id="currentYear">2026</span>
+        Taqtics Website Demo
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
